@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COUNTDOWN</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="icons8-sand-timer-50.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <audio id="myAudio" src="moonlight-mastered-4736.mp3" loop="loop" autoplay="allowed"></audio>
+
+    <div class="columns">
+
+    <div class="center">
+        <label for="event"></label>
+        <div class="center">
+            <input class="tap" placeholder="Tap here your Event Name" type="text" size="26"  id="name" name="event">
+            <button class="addBtn btn" onclick="showEvent()">+</button>
+        </div>
+    </div>
+
+    
+        
+            <div class="date-select">
+                <div class="left">
+                    <label for="day">Day</label>
+                    <input placeholder="dd" type="number" maxlength="2" min="1" max="31" id="day" name="day">
+                    <span>&nbsp;/&nbsp;</span>
+                </div>
+                <div class="left">
+                    <label for="month">Month</label>
+                    <input placeholder="mm" type="number" maxlength="2" size="2" min="1" max="12" id="month" name="month">
+                    <span>&nbsp;/&nbsp;</span>
+                </div>
+                <div class="left">
+                    <label for="year">Year</label>
+                    <input placeholder="yyyy" type="number" maxlength="4" size="4" min="2021" max="9999" id="year" name="year">
+                </div>
+            </div>
+        
+
+            <div class="date-select">
+                <div class="left">
+                    <label for="hour">Hour </label>
+                    <input placeholder="hh" type="number" maxlength="2" size="2" min="0" max="23" id="hour" name="hour">
+                    <span>&nbsp;:&nbsp;</span>
+                </div>
+                <div class="left">
+                    <label for="min">Minute </label>
+                    <input placeholder="mm" type="number" maxlength="2" size="2" min="0" max="59" id="min" name="min">
+                    <span>&nbsp;:&nbsp;</span>
+                </div>
+                <div class="left">
+                    <label for="sec">Second</label>
+                    <input placeholder="ss" type="number" maxlength="2" size="2" min="0" max="59" id="sec" name="sec">
+                </div>
+            </div>
+
+        <button class="startButton btn" onclick="setInterval(eventCountdown, 1000)" id="startBtn">Start</button>
+    </div>
+    <br>
+    <div class="center" >
+        <button class="musicBtn" id="myButton">
+            <img src="icons8-circled-play-50.png" alt="play" width="35px">
+        </button>
+        <button class="musicBtn" id="myButtonStop">
+            <img src="icons8-pause-button-50.png" alt="pause" width="35px">
+        </button>
+    </div>
+
+    <div class="center">
+        <h1 id="eventName" class="head"></h1>
+    </div>
+
+
+
+    <p class="center datashow time" id="show"></p>
+    <br>
+    <div class="center">
+        <hr>
+        <img src="icons8-sand-timer-100.png" alt="timer" width="40px">
+        <hr>
+    </div>
+    <div class="container">
+
+        <div class="event">
+            <div class="block">
+                <h4 class="days"></h4>
+            </div>
+            <div class="constanta">
+                <h3>DAYS</h3>
+            </div>
+        </div>
+
+        <div class="event">
+            <div class="block">
+                <h4 class="hours"></h4>
+            </div>
+            <div class="constanta">
+                <h3>HOURS</h3>
+            </div>
+        </div>
+
+        <div class="event">
+            <div class="block">
+                <h4 class="minutes"></h4>
+            </div>
+            <div class="constanta">
+                <h3>MINUTES</h3>
+            </div>
+        </div>
+
+        <div class="event">
+            <div class="block">
+                <h4 class="seconds"></h4>
+            </div>
+            <div class="constanta">
+                <h3>SECONDS</h3>
+            </div>
+        </div>
+
+    </div>
+    
+    <div class="link">
+        <a class="fb" href="https://grondin.glitch.me/" target="_blank"> <img src="homeiconwhite.png" alt="elena grondin site web" width="35px"></a>
+        <a class="fb" href="https://www.instagram.com/elena.grondin/?hl=fr" target="_blank"> <img src="instaiconwhite.png" alt="instagram" width="35px"></a>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
